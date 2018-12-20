@@ -1,8 +1,8 @@
 var connection = require('./connection');
 
 var omr = {
-    all : function(colName, tableName, conditionCol, ConditionValue, callback){
-        var query = `SELECT ${colName} FROM ${tableName} WHERE ${conditionCol} = "${ConditionValue}";`;
+    all : function(tableName, conditionCol, ConditionValue, callback){
+        var query = "SELECT * FROM " +tableName+" WHERE " +conditionCol+" = " + ConditionValue + ";";
         connection.query(query, (err, data) => {
             if (err){
                 throw err
@@ -11,8 +11,8 @@ var omr = {
         });
     },
     
-    create : function(tableName, newObj, callback){
-        var query = `INSERT INTO ${tableName} SET ${newObj};`;
+    create : function(tableName, newBurger, callback){
+        var query = "INSERT INTO " +tableName+  "(name) VALUES ('" + newBurger+ "');";
         connection.query(query, (err, result) => {
             if (err){
                 throw err
@@ -21,8 +21,8 @@ var omr = {
         });
     },
 
-    update : function(tableName, colName, newValue, callback){
-        var query = `UPDATE ${tableName} SET ${colName} = "${newValue};"`;
+    update : function(tableName, colName, newValue, conditionCol,ConditionValue, callback){
+        var query = "UPDATE " +tableName+ " SET " +colName+ " = "+newValue+" Where " + conditionCol +" = "+ConditionValue +";";
         connection.query(query, (err, result) => {
             if (err){
                 throw err
@@ -31,3 +31,5 @@ var omr = {
         });
     }
 }
+
+module.exports = omr;
