@@ -14,14 +14,11 @@ var exphbr = require('express-handlebars')
 app.engine('handlebars' , exphbr( { defaultLayout : 'main' }));
 app.set("view engine", 'handlebars')
 
-// burger.update("1",function(res){
-//     console.log(res)
-// })
-
+// require router and use it by our app
 var router = require('./controllers/burgerControler')
 app.use(router);
 
-
+// app is listening to the specified port
 app.listen(port , () => {
     console.log(`App is listening to port ${port}`)
 })

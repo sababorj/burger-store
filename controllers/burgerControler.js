@@ -3,6 +3,7 @@ var router = express.Router();
 
 var burger = require('../models/burger');
 
+// setting up the home rout
 router.get('/', (req, res)=> {
    burger.Burgers(function(burger){
         console.log(burger);
@@ -10,6 +11,7 @@ router.get('/', (req, res)=> {
     })
 })
 
+// setting up the post rout
 router.post('/api/add/:name', (req,res) => {
     var name = req.params.name;
     burger.create(name, function(result){
@@ -23,20 +25,18 @@ router.post('/api/add/:name', (req,res) => {
     })
 })
 
+
+// setting up the update rout
 router.put('/api/update/:id', (req,res) => {
     var id = req.params.id;
     burger.update(id, function(result){
-        console.log('update happend')
+                // if record is successfully updated
             if(result.affectedRows === 1){
-                console.log(result)
                 res.json(true)
             } else {
-                console.log(result)
                 res.json(false)
             }
         })
 })
-
-
 
 module.exports = router;
