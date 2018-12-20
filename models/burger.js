@@ -1,9 +1,11 @@
 var omr = require('../config/omr');
 
 var burger = {
-    Burgers : function(conditionValue, callback){
-        omr.all('burger', 'devour', conditionValue, function(result){
-            callback(result[0]);
+    Burgers : function(callback){
+        omr.all('burger', 'devour', "true", function(EatenRes){
+            omr.all('burger', 'devour', "false", function(UnEatenRes){
+                callback(EatenRes,UnEatenRes)
+            })
         });
     },
     create : function(newburger, callback){

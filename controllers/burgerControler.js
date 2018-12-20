@@ -4,15 +4,11 @@ var router = express.Router();
 var burger = require('../models/burger');
 
 router.get('/', (req, res)=> {
-   burger.Burgers("true",function(res){
-        return console.log(res)
+   burger.Burgers(function(Eaten,notEaten){
+        console.log(Eaten);
+        console.log(notEaten);
     })
-    var uneaten = burger.Burgers("false",function(res){
-        return res
-    })
-    console.log('Eaten:'+eaten);
-    console.log('Uneaten'+uneaten);
-    res.render(index);
+    // res.render(index);
 })
 
 module.exports = router;
