@@ -17,21 +17,15 @@
             </div>
         </div>
         {{#each burger}}
-        {{#unless devour}}
+        {{#unless this.devour}}
         <div class="row">
             <div class="col-12">
-                <p> {{id}} - {{name}} </p>
-                <button class="devour" data-id="{{id}}"> Devour It </button>
+                <p> {{this.id}} - {{this.name}} </p>
+                <button class="devour" data-id="{{this.id}}"> Devour It </button>
             </div>
         </div>
         {{/unless}}
         {{/each}}
-        <div class="row">
-            <div class="col-12">
-                <p> Cheeseburger </p>
-                <button class="devour"> Devour It </button>
-            </div>
-        </div>
     </div>
     <div class="col-6">
         <div class="row">
@@ -41,10 +35,10 @@
             </div>
         </div>
         {{#each burger}}
-        {{#if devour}}
+        {{#if this.devour}}
         <div class="row">
             <div class="col-12">
-                <p> {{id}} - {{name}}</p>
+                <p> {{this.id}} - {{this.name}}</p>
             </div>
         </div>
         {{/if}}

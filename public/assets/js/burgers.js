@@ -2,8 +2,8 @@ $(document).ready( () => {
     // seeting up function when user clicks on devour button
     $('.devour').on('click',function(e){
         e.preventDefault();
-        var id = 1;
-        $.ajax('/api/put/'+ id, { method : "put"}).then( function(res){
+        var id = $(this).data("id")
+        $.ajax('/api/update/'+ id, { method : "put"}).then( function(res){
             console.log(res);
             location.reload();
         })
