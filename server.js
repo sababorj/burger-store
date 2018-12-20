@@ -16,7 +16,7 @@ app.set("view engine", 'handlebars')
 
 
 app.get('/', (req, res) => {
-    res.send('Wellcome to my burger store')
+    res.render('index')
 })
 
 app.listen(port , () => {

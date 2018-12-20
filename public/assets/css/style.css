@@ -1,0 +1,34 @@
+body {
+    background-color: darkcyan;
+}
+
+img {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    width: 40%;
+    border: 2px solid black;
+}
+
+h1,h5 {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: cursive
+}
+
+p {
+    font-weight: bold;
+}
+
+.row{
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+hr {
+    border : 1px solid black;
+}
