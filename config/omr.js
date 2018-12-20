@@ -1,8 +1,8 @@
 var connection = require('./connection');
 
 var omr = {
-    all : function(tableName, conditionCol, ConditionValue, callback){
-        var query = "SELECT * FROM " +tableName+" WHERE " +conditionCol+" = " + ConditionValue + ";";
+    all : function(tableName, callback){
+        var query = "SELECT * FROM " +tableName+ ";";
         connection.query(query, (err, data) => {
             if (err){
                 throw err

@@ -16,9 +16,19 @@
                 <hr>
             </div>
         </div>
+        {{#each burger}}
+        {{#unless devour}}
         <div class="row">
             <div class="col-12">
-                <p> Chees burger</p>
+                <p> {{id}} - {{name}} </p>
+                <button class="devour" data-id="{{id}}"> Devour It </button>
+            </div>
+        </div>
+        {{/unless}}
+        {{/each}}
+        <div class="row">
+            <div class="col-12">
+                <p> Cheeseburger </p>
                 <button class="devour"> Devour It </button>
             </div>
         </div>
@@ -30,17 +40,21 @@
                 <hr>
             </div>
         </div>
+        {{#each burger}}
+        {{#if devour}}
         <div class="row">
             <div class="col-12">
-                <p> Classic cheeseburger </p>
+                <p> {{id}} - {{name}}</p>
             </div>
         </div>
+        {{/if}}
+        {{/each}}
     </div>
 </div>
 <form class="create-form">
     <div class="row">
         <div class="col-12">
-            <textarea type="text"></textarea>
+            <textarea type="text" id="burgerName"></textarea>
         </div>
     </div>
     <div class="row">

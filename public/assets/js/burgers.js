@@ -7,6 +7,9 @@ $(document).ready( () => {
     // seeting up function when user clicks on submit button
     $('.submit').on('click', function(e){
         e.preventDefault();
-        alert('submited')
+        var name = $('#burgerName').val()
+        $.ajax('/api/add/'+ name, { method : 'POSt'}).then( function(){
+            location.reload();
+        })
     })
 })
