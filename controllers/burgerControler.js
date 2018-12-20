@@ -23,6 +23,20 @@ router.post('/api/add/:name', (req,res) => {
     })
 })
 
+router.put('/api/update/:id', (req,res) => {
+    var id = req.params.id;
+    burger.update(id, function(result){
+        console.log('update happend')
+            if(result.affectedRows === 1){
+                console.log(result)
+                res.json(true)
+            } else {
+                console.log(result)
+                res.json(false)
+            }
+        })
+})
+
 
 
 module.exports = router;

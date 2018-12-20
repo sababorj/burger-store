@@ -14,10 +14,6 @@ var exphbr = require('express-handlebars')
 app.engine('handlebars' , exphbr( { defaultLayout : 'main' }));
 app.set("view engine", 'handlebars')
 
-// @TODO to be deleted (This is for testing the modal)
-// burger.create("turkeyBurger",function(res){
-//     console.log(res)
-// })
 // burger.update("1",function(res){
 //     console.log(res)
 // })
