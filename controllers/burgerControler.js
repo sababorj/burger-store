@@ -6,7 +6,6 @@ var burger = require('../models/burger');
 // setting up the home rout
 router.get('/', (req, res)=> {
    burger.Burgers(function(burger){
-        console.log(burger);
         res.render('index', {burger: burger});
     })
 })
@@ -20,7 +19,6 @@ router.post('/api/add/:name', (req,res) => {
             res.json(true)
         } else {
             res.json(false);
-            console.log(result);
         }
     })
 })

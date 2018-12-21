@@ -1,6 +1,6 @@
 var connection = require('./connection');
 
-var omr = {
+var orm = {
     // get the list of entries in a table
     all : function(tableName, callback){
         var query = "SELECT * FROM " +tableName+ ";";
@@ -35,4 +35,4 @@ var omr = {
     }
 }
 
-module.exports = omr;
+module.exports = orm;

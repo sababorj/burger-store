@@ -1,4 +1,4 @@
-var omr = require('../config/omr');
+var omr = require('../config/orm');
 
 var burger = {
     // Get the list of all entries in 'burger' table
