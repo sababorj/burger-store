@@ -33,4 +33,4 @@ node packages in use are: *express* ,*express-handlebars*, and *mysql*. An orm.j
 └── server.js
 ```
 
-Please find the deployed application here: [link to Heroku!]
+Please find the deployed application here: [link to Heroku!][https://burger-storee.herokuapp.com/]
