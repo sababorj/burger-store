@@ -1,6 +1,6 @@
 # burger-store
 
-burger-store is a a restaurant app that lets users input the names of burgers they'd like to eat. This is a full-stack application with MVC design pattern.  
+burger-store is a a restaurant app that lets users input the names of burgers they'd like to eat as well as devour them! This is a full-stack application with MVC design pattern.  
 
 node packages in use are: *express* ,*express-handlebars*, and *mysql*. An orm.js file has been prepared to contain the generic sql queries for application's database.
 
